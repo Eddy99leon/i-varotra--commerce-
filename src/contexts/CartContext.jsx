@@ -1,21 +1,22 @@
-import React, {createContext, useState, useEffect} from "react"
+import React, {createContext, useState, useEffect, useContext} from "react"
+import { NotifContext } from "./NotifContext";
 
 
 
 export const CartContext = createContext();
 
 const CartProvider = ({children}) => {
-
+  const { setNotif } = useContext(NotifContext)
   const [cart, setCart] = useState([]);
 
-  // add to cart
+  // ajouter au pannier
   const addToCart = (product) => {
     const newItem = { ...product, amount: 1 };
-    // check if the item is already in cart
+    // verifier si l'item est dans la panier
     const cartItem = cart.find((item) => {
       return item.id === product.id;
     })
-    //if cart item is already to the cart
+    //si l'item est deja dans le pannier
     if (cartItem) {
       const newCart = [...cart].map(item=> {
         if(item.id === product.id) {
@@ -26,11 +27,17 @@ const CartProvider = ({children}) => {
       });
       setCart(newCart);
     } else {
+      // si l'item est pas encore dans le pannier
       setCart([...cart, newItem]);
     }
+    // affichage de notification
+    setNotif(true);
+    setTimeout(() => {
+      setNotif(false);
+    }, 1000);
   };
 
-  // remove from cart
+  // supprimer un item
   const removeFromCart = (id) => {
     const newCart = cart.filter(item => {
       return item.id !== id ;
@@ -38,13 +45,13 @@ const CartProvider = ({children}) => {
     setCart(newCart);
   }
 
-  // clear cart
+  // vider le pannier
   const clearCart = () => {
     const newCart = [] ;
     setCart(newCart);
   }
 
-  // increase amount
+  // incrementer l'amount
   const increaseAmount = (id) => {
     const cartItem = cart.find(item => {
       return item.id === id ;
@@ -52,7 +59,7 @@ const CartProvider = ({children}) => {
     addToCart(cartItem)
   }
 
-  // decrease amount
+  // decrementer l'amount
   const decreaseAmount = (id) => {
     const cartItem = cart.find(item => {
       return item.id === id ;
