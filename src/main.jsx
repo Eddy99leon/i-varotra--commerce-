@@ -12,7 +12,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <SidebarProvider>
       <CartProvider>
         <ProductProvider>
-          <BrowserRouter>
+          <BrowserRouter basename='/'>
             <App />
           </BrowserRouter>
         </ProductProvider>

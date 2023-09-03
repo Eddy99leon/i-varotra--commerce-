@@ -15,13 +15,13 @@ const CartItem = ({item}) => {
 
       <div className="w-full min-h-[150px] flex items-center gap-x-4">
 
-        <Link onClick={() => setIsOpen(false)} to={`/product/${id}`}>
+        <Link onClick={() => setIsOpen(false)} to={`/i-varotra--commerce-/product/${id}`}>
           <img className="max-w-[80px]" src={image} alt="" />
         </Link>
 
         <div className="flex flex-col w-full ml-2">
           <div className="flex items-center justify-between mb-2">
-            <Link onClick={() => setIsOpen(false)} to={`/product/${id}`} className="text-sm font-semibold">
+            <Link onClick={() => setIsOpen(false)} to={`/i-varotra--commerce-/product/${id}`} className="text-sm font-semibold">
               {title}
             </Link>
             <div>

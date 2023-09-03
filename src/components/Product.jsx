@@ -25,7 +25,7 @@ const Product = ({product}) => {
               <BsPlus className="text-3xl" />
             </div>
           </button>
-          <Link to={`/product/${id}`} className="flex justify-center items-center bg-gray-300 w-10 h-10 drop-shadow-xl">
+          <Link to={`/i-varotra--commerce-/product/${id}`} className="flex justify-center items-center bg-gray-300 w-10 h-10 drop-shadow-xl">
             <BsEyeFill />
           </Link>
         </div>
@@ -33,7 +33,7 @@ const Product = ({product}) => {
 
       <div>
         <div className="text-sm capitalize text-gray-500 font-semibold mb-1">{category}</div>
-        <Link to={`/product/${id}`}>
+        <Link to={`/i-varotra--commerce-/product/${id}`}>
          <h2 className=" font-semibold mb-1">{title}</h2>
         </Link>
         <div className="flex justify-between items-center mt-2 px-1">

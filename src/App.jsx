@@ -13,8 +13,8 @@ function App() {
       <Notif />
       <Navbar />
       <Routes>
-        <Route path='/' element={<Home/>} />
-        <Route path='/product/:id' element={<ProductDetails />} />
+        <Route path='/i-varotra--commerce-/' element={<Home/>} />
+        <Route path='/i-varotra--commerce-/product/:id' element={<ProductDetails />} />
       </Routes>
       <Sidebar/>
       <Footer/>
