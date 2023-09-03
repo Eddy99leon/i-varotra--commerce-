@@ -16,7 +16,7 @@ const Product = ({product}) => {
       <div className="relative border-2 border-gray-200 overflow-hidden h-[300px] group transition">
         <div className=" w-full h-full flex justify-center items-center">
           <div className="w-[200px] mx-auto flex justify-center items-center">
-           <img className="max-h-[160px] group-hover:scale-110 transition duration-300" src={image} alt="" />
+           <img className="max-h-[160px] group-hover:scale-110 transition duration-300" src={image} alt="Product-image" />
           </div>
         </div>
         <div className="absolute top-4 -right-12 group-hover:right-3 p-2 opacity-0 group-hover:opacity-100 transition-all duration-300">
@@ -34,7 +34,7 @@ const Product = ({product}) => {
       <div>
         <div className="text-sm capitalize text-gray-500 font-semibold mb-1">{category}</div>
         <Link to={`/i-varotra--commerce-/product/${id}`}>
-         <h2 className=" font-semibold mb-1">{title}</h2>
+         <h2 className="min-h-[70px] font-semibold">{title}</h2>
         </Link>
         <div className="flex justify-between items-center mt-2 px-1">
           <div className="font-bold ">$ {price}</div>

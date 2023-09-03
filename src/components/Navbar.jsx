@@ -11,7 +11,7 @@ function Navbar() {
 
   return (
     <section className="">
-        <nav className="flex justify-between items-center max-w-6xl mx-auto py-3 px-8 text-black">
+        <nav className="flex justify-between items-center max-w-6xl mx-auto py-3 sm:px-8 px-4 text-black">
             <Link to='/i-varotra--commerce-/'>
                 <h1 className="flex items-center text-2xl font-bold">i-varotra</h1>
             </Link>
